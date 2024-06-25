@@ -9,6 +9,9 @@ function Navbar() {
   const handleMobileMenu = ()=>{
     setOpenMobileNav((prev)=>!prev)
   }
+  document.addEventListener("click" , ()=>{
+    setOpenMobileNav(false)
+  })
   
   return (
     <nav className="w-full py-6 md:px-18 p-[5vh] px-[4vh] flex items-center justify-between border-b-[1px] border-zinc-300 relative">
