@@ -1,10 +1,11 @@
 import React from "react";
 import { GoArrowRight } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 
 const WorkCard = ({data, key}) => {
 
-  const {websiteName , technologyUsed , imageUrl} = data
+  const {websiteName , technologyUsed , imageUrl , websiteUrl} = data
 
   return (
     <>
@@ -18,9 +19,9 @@ const WorkCard = ({data, key}) => {
             <p className="text-xs md:mt-3">{technologyUsed}</p>
           </div>
           <div className="button">
-            <button className="px-5 py-2 border  border-zinc-500 rounded-full">
+            <Link to={websiteUrl} className="px-5 py-2 border  border-zinc-500 rounded-full">
               <GoArrowRight />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
