@@ -61,7 +61,7 @@ function Navbar() {
           </span>
         </button>
       </div>
-      <div onClick={()=>handleMobileMenu(false)} className={`mobile-navigation absolute z-[1] duration-300 ease-linear bg-zinc-100  top-[0] left-0 w-full sm:hidden ${openMobileNav ? "block h-[46vh]" :"hidden"}`}>
+      <div className={`mobile-navigation absolute z-[1] duration-300 ease-linear bg-zinc-100  top-[0] left-0 w-full sm:hidden ${openMobileNav ? "block h-[46vh]" :"hidden"}`}>
         <span onClick={handleMobileMenu} className={`cross ${!openMobileNav ?"hidden" : "block"} md:hidden absolute z-[2] text-3xl hover:text-[35px] duration-300 top-7 left-6`}>
           <RxCross2 />
         </span>
