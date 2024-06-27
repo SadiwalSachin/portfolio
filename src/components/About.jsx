@@ -7,6 +7,7 @@ import { TbBrandNodejs } from "react-icons/tb";
 import { FaDatabase } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { MdAnimation } from "react-icons/md";
 
 const About = () => {
   const frontendSkills = [
@@ -30,6 +31,18 @@ const About = () => {
       skillName: "Tailwind",
       logo: <RiTailwindCssFill />,
     },
+    {
+      skillName: "gsap",
+      logo: <MdAnimation/>,
+    },
+    {
+      skillName: "scrollTrigger",
+      logo: <MdAnimation/>,
+    },
+    {
+      skillName: "Framer Motion",
+      logo: <MdAnimation/>,
+    }
   ];
 
   const BackendSkills = [
@@ -65,7 +78,7 @@ const About = () => {
             {frontendSkills.map((item, index) => (
               <span
                 key={index}
-                className="cursor-pointer hover:bg-orange-400 duration-300 hover:px-[1vh] border flex px-[2vh] items-center w-[50%] md:w-[20vh] border-zinc-500 justify-around rounded-full mt-3 py-[1vh]"
+                className="cursor-pointer hover:bg-orange-400 duration-300 hover:px-[1vh] border flex px-[2vh] items-center w-[60%] md:w-[25vh] border-zinc-500 justify-around rounded-full mt-3 py-[1vh]"
               >
                 <h2>{item.skillName}</h2>
                 {item.logo}
