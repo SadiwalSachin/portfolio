@@ -7,14 +7,13 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   const [openMobileNav, setOpenMobileNav] = useState(false);
   const handleMobileMenu = ()=>{
+
     setOpenMobileNav((prev)=>!prev)
   }
-  document.addEventListener("click" , ()=>{
-    setOpenMobileNav(false)
-  })
+
   
   return (
-    <nav className="w-full py-6 md:px-18 p-[5vh] px-[4vh] flex items-center justify-between border-b-[1px] border-zinc-300 relative">
+    <nav  className="w-full py-6 md:px-18 p-[5vh] px-[4vh] flex items-center justify-between border-b-[1px] border-zinc-300 relative">
       <div className="logo-and-menubar flex items-center">
         <span onClick={handleMobileMenu} className={`menu-bar ${openMobileNav ?"hidden" : "block"} sm:hidden mr-4 text-2xl cursor-pointer`}>
         <RiMenu3Line />
@@ -62,7 +61,7 @@ function Navbar() {
           </span>
         </button>
       </div>
-      <div className={`mobile-navigation absolute z-[1] duration-300 ease-linear bg-zinc-100  top-[0] left-0 w-full sm:hidden ${openMobileNav ? "block h-[46vh]" :"hidden"}`}>
+      <div onClick={()=>handleMobileMenu(false)} className={`mobile-navigation absolute z-[1] duration-300 ease-linear bg-zinc-100  top-[0] left-0 w-full sm:hidden ${openMobileNav ? "block h-[46vh]" :"hidden"}`}>
         <span onClick={handleMobileMenu} className={`cross ${!openMobileNav ?"hidden" : "block"} md:hidden absolute z-[2] text-3xl hover:text-[35px] duration-300 top-7 left-6`}>
           <RxCross2 />
         </span>
