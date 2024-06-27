@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { GoArrowRight } from "react-icons/go";
 
 const Card = ({ data }) => {
-  const { websiteName, technologyUsed, imageUrl } = data;
+  const { websiteName, technologyUsed, imageUrl, websiteUrl } = data;
 
   return (
     <>
@@ -19,9 +20,11 @@ const Card = ({ data }) => {
             <div className="view ">
               <button className="md:px-6 px-[2vh] md:text-[2vh] text-[1.4vh] flex items-center gap-3 md:py-3 py-[1vh] cursor-pointer hover:bg-orange-400 duration-300 hover:px-[4vh] border border-zinc-500 rounded-full">
                 View it{" "}
-                <span>
-                  <GoArrowRight />
-                </span>
+                <Link to={websiteUrl}>
+                  <span>
+                    <GoArrowRight />
+                  </span>
+                </Link>
               </button>
             </div>
           </div>

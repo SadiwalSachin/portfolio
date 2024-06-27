@@ -22,19 +22,35 @@ function Navbar() {
         <h2 className="logo font-semibold text-2xl uppercase">sachin</h2>
       </div>
       <div className="nav-part1 md:flex items-center gap-[3vw] hidden sm:flex">
-        <NavLink className="text-base" to="/">
+        <NavLink style={(e)=>{
+          return {
+            color : e.isActive ? "orange" : ""
+          }
+        }} className="text-base" to="/">
           Home
         </NavLink>
-        <NavLink className="text-base" to="/about">
+        <NavLink style={(e)=>{
+          return {
+            color : e.isActive ? "orange" : ""
+          }
+        }} className="text-base" to="/about">
           About
         </NavLink>
-        <NavLink className="text-base" to="/work">
+        <NavLink style={(e)=>{
+          return {
+            color : e.isActive ? "orange" : ""
+          }
+        }} className="text-base" to="/work">
           Works
         </NavLink>
         {/* <NavLink className="text-base" href="">
           Services
         </NavLink> */}
-        <NavLink className="text-base" to="/contact">
+        <NavLink style={(e)=>{
+          return {
+            color : e.isActive ? "orange" : ""
+          }
+        }} className="text-base" to="/contact">
           Contact
         </NavLink>
       </div>
@@ -51,7 +67,7 @@ function Navbar() {
           <RxCross2 />
         </span>
         <div onClick={handleMobileMenu} className="nav-links flex flex-col gap-3 px-6 z-[2] absolute bottom-10">
-          <NavLink className="text-2xl hover:text-[27px] duration-300 text-black" to="/">
+          <NavLink  className="text-2xl hover:text-[27px] duration-300 text-black" to="/">
             Home
           </NavLink>
           <NavLink className="text-2xl hover:text-[27px] duration-300 " to="/about">

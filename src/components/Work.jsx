@@ -11,17 +11,20 @@ const Work = () => {
         {
             websiteName:"SundownStudio",
             technologyUsed:"html css js gsap scrolltrigger",
-            imageUrl:Work1
+            imageUrl:Work1,
+            websiteUrl:"https://sundownclone-project-sachin-sadiwals-projects.vercel.app/"
         },
         {
             websiteName:"Ochi React",
             technologyUsed:"React js , framer motion",
-            imageUrl:Work2
+            imageUrl:Work2,
+            websiteUrl:""
         },
         {
             websiteName:"lazerv.io",
             technologyUsed:"html css js gsap scrolltrigger",
-            imageUrl:Work3
+            imageUrl:Work3,
+            websiteUrl:""
         }
     ]
 

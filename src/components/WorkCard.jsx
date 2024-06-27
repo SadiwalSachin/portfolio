@@ -19,9 +19,11 @@ const WorkCard = ({data, key}) => {
             <p className="text-xs md:mt-3">{technologyUsed}</p>
           </div>
           <div className="button">
-            <Link to={websiteUrl} className="px-5 py-2 border  border-zinc-500 rounded-full">
+            <button className="px-5 py-2 border  border-zinc-500 rounded-full">
+            <Link to={websiteUrl} >
               <GoArrowRight />
             </Link>
+            </button>
           </div>
         </div>
       </div>
